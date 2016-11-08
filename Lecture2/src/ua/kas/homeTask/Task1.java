@@ -16,6 +16,7 @@ public class Task1 {
 		// task7();
 		// task8();
 		// task9();
+		task10();
 	}
 
 	public static void task1() {
@@ -178,12 +179,28 @@ public class Task1 {
 		}
 	}
 
-	public static void tak10() {
+	public static void task10() {
 		System.out.println("-----10-----");
 
 		System.out.println("Please enter 'a' & 'b': ");
 
 		double a = scn.nextDouble();
 		double b = scn.nextDouble();
+
+		double discr = (Math.pow(b, 2) - 4 * a);
+		System.out.println("D = b^2 - 4ac = " + discr);
+
+		System.out.println((-b + (Math.sqrt(discr))));
+
+		if (discr > 0) {
+			System.out.println("2 root: ");
+			System.out.println("x1 = " + (-b + (Math.sqrt(discr))) / (2 * a));
+			System.out.println("x2 = " + (-b - (Math.sqrt(discr))) / (2 * a));
+		} else if (discr == 0) {
+			System.out.println("1 root: ");
+			System.out.println("x = " + ((double) -b / 2 * a));
+		} else if (discr < 0) {
+			System.out.println("no root!");
+		}
 	}
 }
