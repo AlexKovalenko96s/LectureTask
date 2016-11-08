@@ -159,9 +159,7 @@ public class Task1 {
 			max = (a > b) ? a : b;
 			min = (a < b) ? a : b;
 
-			min = (min + max) / 2;
-			max = (min * max) * 2;
-			System.out.println("min = " + min + ", and max = " + max);
+			System.out.println("min = " + (min + max) / 2 + ", and max = " + (min * max) * 2);
 
 			// OR
 
