@@ -13,6 +13,7 @@ public class Main {
 		// fifth();
 		// sixth();
 		// seventh();
+		eight();
 	}
 
 	public static void first() {
@@ -35,12 +36,12 @@ public class Main {
 			m[i] = random.nextInt(100);
 		}
 
-		double number = 0;
-
-		for (int i = 0; i < m.length; i++) {
-			number = Math.sqrt(i);
-
-		}
+		// double number = 0;
+		//
+		// for (int i = 0; i < m.length; i++) {
+		// number = Math.sqrt(i);
+		//
+		// }
 	}
 
 	public static void third() {
@@ -190,6 +191,15 @@ public class Main {
 
 		for (int i = 0; i < m.length / 2; i++) {
 			change1 = m[i];
+			change2 = m[m.length - (1 + i)];
+			m[i] = change2;
+			m[m.length - (1 + i)] = change1;
+		}
+
+		System.out.println("---");
+
+		for (int i = 0; i < m.length; i++) {
+			System.out.println(m[i]);
 		}
 	}
 }
