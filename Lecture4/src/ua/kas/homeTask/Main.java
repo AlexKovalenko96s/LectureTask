@@ -113,13 +113,34 @@ public class Main {
 	}
 
 	public static void fifth() {
+		System.out.println("-----5-----");
 
+		int[] m = { 2, 4, 6, 23, 5, 22, 12, 9, 41, 10, 11 };
+
+		int count = 0;
+		int max = 0;
+
+		for (int i = 0; i < m.length; i++) {
+			max = (m[i] > max) ? m[i] : max;
+		}
+
+		for (int i = 0; i < m.length; i++) {
+			for (int j = 1; j <= max; j++) {
+				if (((double) m[i] / j) % 1 == 0) {
+					count++;
+				}
+			}
+			if (count == 2) {
+				System.out.println(m[i]);
+			}
+			count = 0;
+		}
 	}
 
 	public static void sixth() {
-		System.out.println("-----5-----");
+		System.out.println("-----6-----");
 
-		int[] m = { 2, 4, 6, 23, 5, 22, 12, 9, 5, 10, 11 };
+		int[] m = { 2, 4, 6, 23, 5, 22, 12, 9, 7, 10, 11 };
 
 		int max = 0;
 		int min = 0;
