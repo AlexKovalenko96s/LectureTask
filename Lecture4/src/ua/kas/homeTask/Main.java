@@ -117,23 +117,36 @@ public class Main {
 
 		int[] m = { 2, 4, 6, 23, 5, 22, 12, 9, 41, 10, 11 };
 
-		int count = 0;
-		int max = 0;
+		// int count = 0;
+		// int max = 0;
+		//
+		// for (int i = 0; i < m.length; i++) {
+		// max = (m[i] > max) ? m[i] : max;
+		// }
+		//
+		// for (int i = 0; i < m.length; i++) {
+		// for (int j = 1; j <= max; j++) {
+		// if (((double) m[i] / j) % 1 == 0) {
+		// count++;
+		// }
+		// }
+		// if (count == 2) {
+		// System.out.println(m[i]);
+		// }
+		// count = 0;
+		// }
 
 		for (int i = 0; i < m.length; i++) {
-			max = (m[i] > max) ? m[i] : max;
-		}
-
-		for (int i = 0; i < m.length; i++) {
-			for (int j = 1; j <= max; j++) {
-				if (((double) m[i] / j) % 1 == 0) {
-					count++;
+			for (int j = 2; j < m[i]; j++) {
+				if (m[i] % j == 0) {
+					System.out.println("Число " + m[i] + " не простое");
+					break;
 				}
+
+				if (j == m[i] - 1)
+					System.out.println("Число " + m[i] + " простое");
+
 			}
-			if (count == 2) {
-				System.out.println(m[i]);
-			}
-			count = 0;
 		}
 	}
 
