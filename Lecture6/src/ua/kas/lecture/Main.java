@@ -14,5 +14,6 @@ public class Main {
 		System.out.println(notMain.delimeter(a, b));
 		System.out.println(notMain.pow(a, b));
 		// Cat cat = new Cat("Red", 13);
+		// System.out.println(cat);
 	}
 }
