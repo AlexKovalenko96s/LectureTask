@@ -9,8 +9,11 @@ public class Main {
 		Point p4 = new Point(1, 5, "p4");
 		Point p5 = new Point(3, 6, "p5");
 
+		@SuppressWarnings("unused")
 		Figure figure1 = new Figure(p1, p2, p3);
+		@SuppressWarnings("unused")
 		Figure figure2 = new Figure(p1, p2, p3, p4);
+		@SuppressWarnings("unused")
 		Figure figure3 = new Figure(p1, p2, p3, p4, p5);
 	}
 
